@@ -1,10 +1,12 @@
+import { RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  standalone: true,
+  template: '<router-outlet></router-outlet>',
+  imports:[CommonModule,RouterModule]
+
 })
-export class AppComponent {
-  title = 'OnlineMuhasebeClient';
-}
+export class AppComponent {}
